@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq8k3x7v2n1m5"]
+
+[ext_resource type="Script" uid="uid://b27mrf3hj74gs" path="res://Scripts/Core/MainScene.gd" id="1"]
+[ext_resource type="Theme" uid="uid://12ohw7hvy6kw" path="res://assets/ui/medieval_theme.tres" id="2"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.08, 0.06, 1)
+
+[node name="Menu" type="VBoxContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -200.0
+offset_right = 150.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2")
+
+[node name="Title" type="Label" parent="UI/Menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Medieval Roguelike"
+horizontal_alignment = 1
+
+[node name="Spacer1" type="Control" parent="UI/Menu"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="HostButton" type="Button" parent="UI/Menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Host Game"
+
+[node name="JoinButton" type="Button" parent="UI/Menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Join Game"
+
+[node name="CharacterSelectButton" type="Button" parent="UI/Menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Select Character"
+
+[node name="StartButton" type="Button" parent="UI/Menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Start Run"
+
+[node name="Spacer2" type="Control" parent="UI/Menu"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="QuitButton" type="Button" parent="UI/Menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Quit"

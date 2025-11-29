@@ -1,0 +1,74 @@
+[gd_scene load_steps=3 format=3 uid="uid://h3k7x0v8n6m1"]
+
+[ext_resource type="Script" path="res://Scripts/UI/HUD.gd" id="1"]
+[ext_resource type="Theme" uid="uid://bq8k3x7v2n1m6" path="res://assets/ui/medieval_theme.tres" id="2"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+theme = ExtResource("2")
+
+[node name="TopBar" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -120.0
+offset_right = 0.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="HealthBar" type="ProgressBar" parent="TopBar"]
+layout_mode = 2
+custom_minimum_size = Vector2(200, 30)
+max_value = 100.0
+value = 100.0
+show_percentage = false
+
+[node name="ManaBar" type="ProgressBar" parent="TopBar"]
+layout_mode = 2
+custom_minimum_size = Vector2(200, 30)
+max_value = 100.0
+value = 100.0
+show_percentage = false
+
+[node name="LevelLabel" type="Label" parent="TopBar"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Level 1"
+vertical_alignment = 1
+
+[node name="ExpBar" type="ProgressBar" parent="TopBar"]
+layout_mode = 2
+custom_minimum_size = Vector2(200, 20)
+max_value = 100.0
+show_percentage = false
+
+[node name="BottomBar" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -60.0
+offset_right = 0.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="SkillTreeButton" type="Button" parent="BottomBar"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Skill Tree (K)"
+
